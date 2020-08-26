@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.UserExperience">
+
+    <include
+        android:id="@+id/toolbar_main"
+        layout="@layout/toolbar_other"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_label"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:entries="@array/spinnerItems"
+        android:background="@drawable/et_background"
+        android:padding="2dp"
+        app:layout_constraintBottom_toTopOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_main" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title:"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/et_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_label" />
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/et_background"
+        android:padding="2dp"
+        android:layout_margin="3dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_company"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/tv_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Company/Institution"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+
+        app:layout_constraintBottom_toTopOf="@id/et_company"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_title" />
+
+    <EditText
+        android:id="@+id/et_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/et_background"
+        android:padding="2dp"
+        android:layout_margin="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_start_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_company" />
+
+    <TextView
+        android:id="@+id/tv_start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Date (YYYY-MM)"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@id/et_start_date"
+        app:layout_constraintEnd_toStartOf="@id/tv_end_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_company" />
+
+    <EditText
+        android:id="@+id/et_start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="2009-08"
+        android:inputType="number"
+        android:background="@drawable/et_background"
+        android:padding="2dp"
+        android:layout_margin="3dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_highlights"
+        app:layout_constraintEnd_toStartOf="@id/et_end_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_start_date" />
+
+    <TextView
+        android:id="@+id/tv_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End date (YYYY-MM)"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@id/et_end_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_start_date"
+        app:layout_constraintTop_toBottomOf="@id/et_company" />
+
+    <EditText
+        android:id="@+id/et_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@drawable/et_background"
+        android:hint="2009-12"
+        android:inputType="number"
+        android:padding="2dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_highlights"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/et_start_date"
+        app:layout_constraintTop_toBottomOf="@id/tv_end_date" />
+
+    <TextView
+        android:id="@+id/tv_highlights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max 3 highlights from this place:"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@id/et_highlights1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_end_date" />
+
+    <EditText
+        android:id="@+id/et_highlights1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/et_background"
+        android:padding="2dp"
+        android:layout_margin="3dp"
+        android:hint="Worked on leading the sales team"
+        app:layout_constraintBottom_toTopOf="@id/et_highlights2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_highlights" />
+
+    <EditText
+        android:id="@+id/et_highlights2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Saved coworkers from fire"
+        android:background="@drawable/et_background"
+        android:padding="2dp"
+        android:layout_margin="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_highlights3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_highlights1" />
+
+    <EditText
+        android:id="@+id/et_highlights3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Saved coworkers from fire"
+        android:background="@drawable/et_background"
+        android:padding="2dp"
+        android:layout_margin="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_addExp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_highlights2" />
+
+    <Button
+        android:id="@+id/btn_addExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Experience"
+        android:background="@drawable/button_background"
+        android:padding="7dp"
+        android:textColor="@android:color/white"
+        android:layout_margin="3dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_continue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_highlights3" />
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:background="@drawable/button_background"
+        android:padding="7dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_addExp" />
+
+</android.support.constraint.ConstraintLayout>

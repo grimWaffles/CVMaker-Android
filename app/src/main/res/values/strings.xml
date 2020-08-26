@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CSE464_1610329_MidtermProject</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+</resources>

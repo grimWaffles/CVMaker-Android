@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AddInformation">
+
+    <include
+        layout="@layout/toolbar_other"
+        android:id="@+id/toolbar_main"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_user_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_user_info"
+        android:text="User Information"
+        android:background="@drawable/button_background"
+        android:padding="7dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_user_exp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_user_exp"
+        android:text="User Experiences"
+        android:background="@drawable/button_background"
+        android:padding="7dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_user_info"
+        app:layout_constraintBottom_toTopOf="@+id/tv_save_loc"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_save_loc"
+        android:text="Save in:"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/et_save_loc"
+        app:layout_constraintTop_toBottomOf="@id/btn_user_exp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_create"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_save_loc"
+        android:hint="documents/cv.pdf"
+        android:background="@drawable/et_background"
+        android:padding="4dp"
+        app:layout_constraintStart_toEndOf="@id/tv_save_loc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_user_exp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_create"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_create"
+        android:text="Create"
+        android:background="@drawable/button_background"
+        android:padding="7dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_save_loc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</android.support.constraint.ConstraintLayout>
